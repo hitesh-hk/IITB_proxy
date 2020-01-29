@@ -1,0 +1,26 @@
+## IIT Bombay proxy
+#edit by HK
+function proxynetmon(){
+        echo -n "username:"
+        read -e username
+        echo -n "password:"
+        read -es password
+
+        export http_proxy="http://$username:$password@netmon.iitb.ac.in:80/"
+        export https_proxy="http://$username:$password@netmon.iitb.ac.in:80/"
+        export ftp_proxy="http://$username:$password@netmon.iitb.ac.in:80/"
+        export ftps_proxy="http://$username:$password@netmon.iitb.ac.in:80/"
+        export gopher_proxy="http://$username:$password@netmon.iitb.ac.in:80/"
+        export wais_proxy="http://$username:$password@netmon.iitb.ac.in:80/"
+        export no_proxy="*.iitb.ac.in,10.0.0.0/8,127.0.0.1,localhost"
+
+        #some apps need the vairables in CAPS
+
+        export HTTP_PROXY="http://$username:$password@netmon.iitb.ac.in:80/"
+        export HTTPS_PROXY="http://$username:$password@netmon.iitb.ac.in:80/"
+        export FTP_PROXY="http://$username:$password@netmon.iitb.ac.in:80/"
+        export FTPS_PROXY="http://$username:$password@netmon.iitb.ac.in:80/"
+        export GOPHER_PROXY="http://$username:$password@netmon.iitb.ac.in:80/"
+        export WAIS_PROXY="http://$username:$password@netmon.iitb.ac.in:80/"
+        export NO_PROXY=".iitb.ac.in,10.0.0.0/8,127.0.0.1,localhost"
+        }
